@@ -27,9 +27,15 @@
     <ClInclude Include="src\Acorn\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Acorn\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Acorn\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Acorn\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
