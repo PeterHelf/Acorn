@@ -9,3 +9,5 @@
 #else
 	#error Acorn only supports Windows!
 #endif // AC_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
