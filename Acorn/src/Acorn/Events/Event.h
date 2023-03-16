@@ -2,7 +2,6 @@
 
 #include "Acorn/Core.h"
 
-#include <string>
 #include <functional>
 
 namespace Acorn 

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Acorn {
 
 	class ACORN_API KeyEvent : public Event
