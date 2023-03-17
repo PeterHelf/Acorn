@@ -152,6 +152,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Acorn.h" />
     <ClInclude Include="src\Acorn\Application.h" />
     <ClInclude Include="src\Acorn\Core.h" />
     <ClInclude Include="src\Acorn\EntryPoint.h" />
@@ -162,7 +163,6 @@
     <ClInclude Include="src\Acorn\Log.h" />
     <ClInclude Include="src\Acorn\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\acorn.h" />
     <ClInclude Include="src\acpch.h" />
   </ItemGroup>
   <ItemGroup>
