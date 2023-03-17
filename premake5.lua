@@ -1,5 +1,6 @@
 workspace "Acorn"
 	architecture "x64"
+    startproject "Sandbox"
 
 	configurations
 	{
@@ -20,6 +21,7 @@ project "Acorn"
 	location "Acorn"
 	kind "SharedLib"
 	language "C++"
+    staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -48,7 +50,7 @@ project "Acorn"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+        runtime "Debug"
 		systemversion "latest"
 
 		defines
@@ -65,19 +67,23 @@ project "Acorn"
 	filter "configurations:Debug"
 		defines "AC_DEBUG"
 		symbols "On"
+        runtime "Debug"
 		
 	filter "configurations:Release"
 		defines "AC_RELEASE"
 		optimize "On"
+        runtime "Release"
 		
 	filter "configurations:Dist"
 		defines "AC_DIST"
 		optimize "On"
+        runtime "Release"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+    staticruntime "off"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -101,7 +107,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+        runtime "Debug"
 		systemversion "latest"
 
 		defines
@@ -112,11 +118,14 @@ project "Sandbox"
 	filter "configurations:Debug"
 		defines "AC_DEBUG"
 		symbols "On"
+        runtime "Debug"
 		
 	filter "configurations:Release"
 		defines "AC_RELEASE"
 		optimize "On"
+        runtime "Release"
 		
 	filter "configurations:Dist"
 		defines "AC_DIST"
 		optimize "On"
+        runtime "Release"
